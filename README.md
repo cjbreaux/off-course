@@ -14,6 +14,8 @@ Randee Layosa & Chris Breaux
 
 ### Initial Sketches
 
+<p align="center"><img src="img/bow.png" width="375" height="667"></p>
+
 #### Mobile Versions
 
 #### Desktop Version
