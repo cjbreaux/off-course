@@ -1,8 +1,36 @@
-$font-stack: Helvetica, sans-serif;
-$primary-font-color: red;
+$font-stack: Baroness Kuffner, sans-serif;
+$font-body: DIN Condensed, sans-serif;
+$primary-font-color: black;
+$header-color: #CB9F3C;
+
+*{
+  margin: 0;
+}
 
 body {
   font: 100% $font-stack;
   color: $primary-font-color;
-  background-color: blue;
+  border: 1px solid red;
+}
+
+h1{
+  text-align: center;
+  font-size: 3em;
+  margin: 1em 0;
+  color: $header-color;
+  text-shadow: -5px 3px 0 rgba(0,0,0,0.50);
+  }
+
+.time-banner {
+  display: flex;
+  justify-content: center;
+  // align-content: center;
+  height: auto;
+  background-color: rgba(0,0,0,0.5);
+}
+
+#countdown {
+  align-self: center;
+  font-size: 16vw;
+  font-family: $font-body;
 }
