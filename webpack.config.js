@@ -56,7 +56,27 @@ module.exports = {
       inject: 'body',
       template: './src/index.html',
       filename: 'index.html'
-    })
+    }),
+
+    new HtmlWebpackPlugin({
+    template: './src//html/press.html',
+    filename: 'press.html'
+    }),
+
+    new HtmlWebpackPlugin({
+    template: './src//html/preview.html',
+    filename: 'preview.html'
+    }),
+
+    new HtmlWebpackPlugin({
+    template: './src//html/blog.html',
+    filename: 'blog.html'
+    }),
+
+    new HtmlWebpackPlugin({
+    template: './src//html/theTeam.html',
+    filename: 'theTeam.html'
+    }),
 
   ]
 
