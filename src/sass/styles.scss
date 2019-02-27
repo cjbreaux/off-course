@@ -5,6 +5,7 @@ $header-color: #CB9F3C;
 
 *{
   margin: 0;
+  padding: 0;
 }
 
 body {
@@ -23,14 +24,15 @@ h1{
 
 .time-banner {
   display: flex;
-  justify-content: center;
-  // align-content: center;
-  height: auto;
+  justify-content: flex-end;
+  align-content: flex-end;
+  // height: auto;
   background-color: rgba(0,0,0,0.5);
 }
 
 #countdown {
-  align-self: center;
   font-size: 16vw;
   font-family: $font-body;
+  border: 1px solid black;
+  padding-top: 4%;
 }
