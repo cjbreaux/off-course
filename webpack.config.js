@@ -1,5 +1,7 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const CleanWebpackPlugin = require('clean-webpack-plugin');
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 
 module.exports = {
 
@@ -40,11 +42,12 @@ module.exports = {
       },
 
       {
-        test:/\.html$/,
-        use: [
-          'html-loader'
-        ]
-      },
+        test: /\.html$/,
+        loader: 'html-srcsets-loader',
+        options: {
+           attrs: ['img:src', ':srcset'],
+        },
+      }
 
     ]
 
@@ -55,7 +58,11 @@ module.exports = {
     new HtmlWebpackPlugin({
       inject: 'body',
       template: './src/index.html',
-      filename: 'index.html'
+      filename: 'index.html',
+      minify: {
+        removeComments: true,
+        collapseWhitespace: true
+      }
     }),
 
     new HtmlWebpackPlugin({
@@ -77,6 +84,10 @@ module.exports = {
     template: './src//html/theTeam.html',
     filename: 'theTeam.html'
     }),
+
+    new UglifyJsPlugin(),
+
+    new CleanWebpackPlugin(['dist'])
 
   ]
 
