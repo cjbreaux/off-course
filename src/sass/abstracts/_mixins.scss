@@ -1,0 +1,9 @@
+@mixin timer($clock-size: 16px) {
+  font-size: $clock-size;
+  font-family: $font-body;
+  color: $green;
+  text-shadow: -.05em .05em 0 rgba(0,0,0,0.50);
+  // text-align: center;
+  align-items: center;
+  margin: 0;
+}
