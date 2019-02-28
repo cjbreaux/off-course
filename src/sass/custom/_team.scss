@@ -1,0 +1,71 @@
+body{
+  @include nav;
+  .nav{
+    height: 70px;
+  }
+}
+
+*{
+  margin: 0;
+  // border: 1px solid red;
+}
+
+.body-team {
+  background-color: $purple;
+  background-image: url(../assets/images/topo.png);
+  background-size: cover;
+  background-repeat: repeat;
+
+}
+
+.content-wrapper{
+  width: 100vw;
+  height: 100vh;
+}
+
+.content{
+  display: flex;
+  flex-wrap: wrap;
+  margin: auto;
+  max-width: 80vw;
+  // min-width: 200px;
+  .profiles {
+    box-sizing: border-box;
+    display: flex;
+    // flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    height: (100% / 3);
+    // height: auto;
+    img {
+      height: auto;
+      width: 40%;
+      max-width: 250px;
+      -webkit-clip-path: circle(39.1% at 50% 43%);
+      clip-path: circle(39.1% at 50% 43%);
+      margin-top: 5%;
+    }
+    p{
+      width: 70%;
+      max-height: 100%;
+      color: $header-color;
+      line-height: 1.5em;
+      font-family: $font-body;
+      padding: 2%;
+    }
+  }
+}
+
+
+@media only screen and (max-width: 768px) {
+  .profiles {
+    flex-direction: column;
+    img{
+      margin-top: 0;
+    }
+    &:nth-child(even){
+      display: flex;
+      flex-direction: column-reverse;
+    }
+  }
+}

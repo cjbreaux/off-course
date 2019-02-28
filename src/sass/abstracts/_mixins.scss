@@ -38,9 +38,11 @@
           z-index: 1;
           a {
             color: white;
+            font-size: 1.5em;
             padding: 12px 16px;
             text-decoration: none;
             display: block;
+            cursor: crosshair;
           }
         }
         button{
@@ -49,6 +51,7 @@
           display: inline-block;
           height: 100%;
           width: 5.5em;
+          border: none;
           img{
             width: 100%;
             height: auto;
