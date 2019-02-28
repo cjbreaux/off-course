@@ -1,0 +1,122 @@
+html {
+  box-sizing: border-box;
+  font-size: calc(100% + .2vw);
+}
+
+* {
+  border:1px solid purple;
+}
+
+
+body {
+  margin: 0;
+  padding: 0;
+  font: 100% $font-stack;
+  color: $primary-font-color;
+  border: 1px solid red;
+  height: 100%
+}
+
+.container {
+  height: 100vh;
+  display: grid;
+  grid-template: repeat(9, 1fr) / repeat(9, 1fr);
+  grid-gap: 10px;
+  grid-template-areas:
+    "logo logo logo logo logo logo logo logo logo"
+    "logo logo logo logo logo logo logo logo logo"
+    "time time time time time time time time time"
+    ". . . . . . . . ."
+    ". . . . . . . . ."
+    ". . . . . . . . ."
+    ". . . sign sign sign . . ."
+    ". . . sign sign sign . . ."
+    ". . . sign sign sign . . ."
+
+}
+
+.background {
+  display: flex;
+  justify-content: center;
+  grid-area: 1 / 1/ -1 / -1;
+  img {
+    // height: 100%;
+    // width: 100%;
+  }
+}
+
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  grid-area: logo;
+}
+
+.time-banner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  grid-area: time;
+
+  background-color: rgba(0,0,0,0.5);
+  p#countdown {
+    @include timer(7em);
+  }
+}
+
+.sign {
+  grid-area: sign;
+  img {
+    height: 100%;
+    width: 100%;
+  }
+}
+
+//row-start column-start row-end column-end
+
+.preview {
+  grid-area: -4 / 5/ -3 / 7;
+  img {
+    height: auto;
+    width: 100%;
+    margin-left: -10%;
+  }
+}
+
+.press {
+  grid-area: -4 / 5/ -3 / 7;
+  img {
+    height: auto;
+    width: 100%;
+    margin-top: 27%;
+    margin-left: -60%;
+  }
+}
+
+.blog {
+  grid-area: -3 / 5/ -2 / 7;
+  img {
+    height: auto;
+    width: 100%;
+    margin-left: 10%;
+  }
+}
+
+.team {
+  grid-area: -3 / 5/ -2 / 7;
+  img {
+    height: auto;
+    width: 100%;
+    margin-top: 27%;
+    margin-left: -30%;
+  }
+}
+
+
+h1{
+
+  font-size: 5em;
+  // margin: 1em 0;
+  color: $header-color;
+  text-shadow: -5px 3px 0 rgba(0,0,0,0.50);
+  }
