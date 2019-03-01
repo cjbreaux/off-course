@@ -59,7 +59,7 @@ body {
   grid-area: time;
   background-color: rgba(0,0,0,0.5);
   p#countdown {
-    @include timer(7em);
+    @include timer(9vw);
   }
 }
 
@@ -114,7 +114,7 @@ body {
 
 h1{
 
-  font-size: 5em;
+  font-size: 8vw;
   // margin: 1em 0;
   color: $header-color;
   text-shadow: -5px 3px 0 rgba(0,0,0,0.50);
